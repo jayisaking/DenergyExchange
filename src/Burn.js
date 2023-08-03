@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Button, InputField } from "./formComps";
+import { supply } from './web3Utils';
 const Burn = () => {
   const [ burnQuantity, setBurnQuantity ] = useState(''); 
   const [ additionalInfo, setAdditionalInfo ] = useState('');
   const [ sourceSupplier, setSourceSupplier ] = useState(''); 
-  function burnTokenForElectriciy() {
+  async function burnTokenForElectriciy() {
     // TODO: send the data to the blockchain
+    supply(1000);
   }
 
 

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Button, InputField, Dropdown } from "./formComps";
+import { supply } from './web3Utils';
 const Send = () => {
   const [ targetStorageOperator, setTargetStorageOperator ] = useState('');
   const [ trasmissionElectricitVolume, setTrasmissionElectricitVolume ] = useState('');
   const [ additionalInfo, setAdditionalInfo ] = useState('');
   const [ senderIdentity, setSenderIdentity ] = useState('');
-  function sendElectricity() {
+  async function sendElectricity() {
     // TODO: send the data to the blockchain
+    await supply(1000);
   }
 
 

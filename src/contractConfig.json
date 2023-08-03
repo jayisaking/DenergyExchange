@@ -1,0 +1,24 @@
+{
+  "ElectricityToken": {
+    "address": "0x23e7Ab109219d90296368bA863907fCe1396365a",
+    "abi": [
+      "function addAdmin (address newAdmin)",
+      "function addAllowedCollecteralToken(address collecteralToken, uint256 collecteralAmount, uint256 electricityRate)",
+      "function registerExaminer(address token)",
+      "function supply(uint256 amount)",
+      "function request(uint256 amount)",
+      "function storageSupplyConfirm(uint256 amount, address receiver, uint256 requestIndex)",
+      "function storageReceiveConfirm(uint256 amount, address supplier, uint256 supplyIndex, address collecteralToken)",
+      "function approveSupplyTransmission(address supplier, address receiver, uint256 amount, uint256 supplyIndex)",
+      "function approveRequestTransmission(address supplier, address receiver, uint256 amount, uint256 requestIndex)",
+      "function withdrawSupplyConfirmationReward(uint256 supplyIndex)",
+      "function withdrawRequestConfirmationReward(uint256 requestIndex)",
+      "function withdrawStorageCollecteral(address collecteralToken, uint256 requestIndex)"
+    ],
+    "eventAbi": {
+      "CollecteralTokenAdded": "event CollecteralTokenAdded(address collecteralToken, uint256 collecteralAmount, uint256 electricityRate)",
+      "SupplyElectricity": "event SupplyElectricity(uint256 amount, address supplier)",
+      "RequestElectricity": "event RequestElectricity(uint256 amount, address receiver)"
+    }
+  }
+}

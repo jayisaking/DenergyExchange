@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Button, InputField } from "./formComps";
+import { supply } from './web3Utils';
 const Sign = () => {
   const [ targetElectricityReceiver, setTargetElectricityReceiver ] = useState('');
   const [ trasmissionElectricitVolume, setTrasmissionElectricitVolume ] = useState('');
   const [ additionalInfo, setAdditionalInfo ] = useState('');
   const [ sourceSupplier, setSourceSupplier ] = useState(''); 
-  function SignTrasmittedElectricity() {
+  async function SignTrasmittedElectricity() {
     // TODO: Sign the data to the blockchain
+    supply(1000);
   }
 
 
